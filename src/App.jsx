@@ -8,13 +8,14 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route path="incidentreport" element={<UserDashboard />} />
     <Route path="report" >
       <Route path="form" element={<NewForm />} />
-      <Route path="rejected" element={<Rejected />} />
+      <Route path="rejected/:id" element={<Rejected />} />
       <Route path="department" element={<DepartmentDashboard />} />
+      <Route path="*" element={<div>Error: 404</div>} />
     </Route>
     <Route path="*" element={<div>Error: 404</div>} />
   </Route>
 ))
-
+  
 
 function App() {
 
