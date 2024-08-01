@@ -10,7 +10,10 @@ const UserDashboard = () => {
       <h1 className='text-3xl lg:text-6xl text-center font-mono'>User Dashboard</h1>
       <div className='w-full p-4 lg:p-10'>
         <h2 className='text-xl lg:text-3xl'>Submitted Incident Forms</h2>
-        <FormsTable forms={formData} />
+        <div className='rounded-lg overflow-hidden'>
+
+          <FormsTable forms={formData} />
+        </div>
         <div className='w-full p-5 lg:p-10'>
           {formData.map((form, index) => {
             return (
