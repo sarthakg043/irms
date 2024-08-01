@@ -1,7 +1,8 @@
 import Layout from './Layout'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
-import { DepartmentDashboard, NewForm, Rejected, UserDashboard } from './pages'
+import { DepartmentDashboard, Login, NewForm, Rejected, UserDashboard } from './pages'
 import './App.css'
+
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Layout />} >
@@ -11,10 +12,12 @@ const router = createBrowserRouter(createRoutesFromElements(
       <Route path="rejected/:id" element={<Rejected />} />
       <Route path="department" element={<DepartmentDashboard />} />
       <Route path="*" element={<div>Error: 404</div>} />
+      <Route path="" element={<div>Error: 404</div>} />
     </Route>
+    <Route path="" element={<Login />} />
     <Route path="*" element={<div>Error: 404</div>} />
   </Route>
-))
+));
   
 
 function App() {
