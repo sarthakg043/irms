@@ -1,0 +1,6 @@
+.alternate-colors:nth-child(odd){
+
+}
+.alternate-colors:nth-child(even){
+    @apply bg-gray-200/65
+}
