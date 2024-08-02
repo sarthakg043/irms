@@ -10,6 +10,8 @@ import {
   } from "@/components/ui/table"
 import { useNavigate } from "react-router-dom"
 import './FormsTable.css'
+import { Button } from "../ui/button"
+import { EyeIcon, SquarePen } from "lucide-react"
   
 
 export function FormsTable({forms}) {
@@ -36,17 +38,36 @@ export function FormsTable({forms}) {
             <TableHead className="hidden lg:table-cell text-white">Reported Date</TableHead>
             <TableHead className="hidden lg:table-cell text-white">Reported Time</TableHead>
             <TableHead className="text-white">Status</TableHead>
+            <TableHead className="text-white"></TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {forms.map((form, index) => (
-            <TableRow className="alternate-colors" key={form.id} onClick={(e) => handleRowClick(e, form.status, form.id)}>
+            <TableRow className="alternate-colors" key={form.id}>
               <TableCell className="font-medium">{index+1}</TableCell>
               <TableCell>{ (form.title ? (form.title.length > 50 ? form.title.substring(0, 50) + "..." : form.title) : "No Title Available")}</TableCell>
               <TableCell className="hidden md:table-cell">{form.department}</TableCell>
               <TableCell className="hidden lg:table-cell">{form.reported_date}</TableCell>
               <TableCell className="hidden lg:table-cell">{form.reported_time}</TableCell>
               <TableCell>{form.status}</TableCell>
+              <TableCell>
+                <Button 
+                    className={`w-[5.5rem] dark:text-white ${form.status === "REJECTED" ? "bg-yellow-500 dark:bg-yellow-500 hover:bg-yellow-600" : "dark:bg-slate-800"}`} 
+                    onClick={(e) => handleRowClick(e, form.status, form.id)}
+                >
+                    {form.status === "REJECTED" ? (
+                        <>
+                            Edit
+                            <SquarePen className="ml-2 w-5 h-5" />
+                        </>
+                    ) : (
+                        <>
+                            View
+                            <EyeIcon className="ml-2 w-20 h-20" />
+                        </>
+                    )}
+                </Button>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
@@ -59,4 +80,3 @@ export function FormsTable({forms}) {
       </Table>
     )
   }
-  

@@ -1,6 +1,7 @@
 .alternate-colors:nth-child(odd){
-
+    @apply dark:bg-slate-700;
 }
 .alternate-colors:nth-child(even){
-    @apply bg-gray-200/65
+    @apply bg-gray-200/65;
+    @apply dark:bg-slate-600;
 }
