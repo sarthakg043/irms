@@ -54,7 +54,7 @@ export function FormsTable({forms}) {
                         }
                     </div>
                     <div className="mt-2 w-full lg:hidden">
-                        <Badge variant={`${form.status === "REJECTED" ? "destructive" : ""}`}>{form.status}</Badge>
+                        <Badge variant={`${form.status === "REJECTED" ? "destructive" : ""}`} className={`w-[5.5rem] ${form.status === "REJECTED" ? "" : (form.status === "RESOLVED" ? "bg-green-500": "bg-yellow-500")}`}><div className="mx-auto">{form.status}</div> </Badge>
                     </div>
                 </div>
             </TableCell>

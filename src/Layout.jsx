@@ -12,8 +12,9 @@ const Layout = () => {
           </div>
         </div>
         <Navbar />
-        <div className='h-[80vh]'>&nbsp;</div>
+        <div className='h-[5vh]'>&nbsp;</div>
         <br /><br />
+        <Outlet />
         <Footer />
     </div>
   )

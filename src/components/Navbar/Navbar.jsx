@@ -1,4 +1,3 @@
-"use client"
 import React, { useState } from "react";
 import { HoveredLink,Menu } from "../ui/navbar-menu";
 import { cn } from "@/lib/utils";
@@ -12,7 +11,7 @@ export default function NavBarComponent({ className }) {
         <Menu setActive={setActive}>
           <HoveredLink href="/">
             <div className="flex items-center">
-              <img src="public\images\logo2.png" alt="" className="h-14 w-16" />
+              <img src="/images/logo2.png" alt="" className="h-14 w-16" />
               <span className="text-[#2C2C2C] font-semibold hidden sm:block">
                 AL WAHDANIA
               </span>
