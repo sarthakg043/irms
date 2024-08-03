@@ -2,6 +2,7 @@
     {
         "id": 1,
         "incident_details": 12,
+        "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sit nobis assumenda tempora tempore consequatur temporibus. Necessitatibus unde in illo cumque dolorem sapiente odit sit, asperiores atque quia commodi velit! Repellendus similique dolor neque quis architecto laboriosam harum, ab minima, aut repellat eligendi quidem est optio ad corrupti delectus iure unde necessitatibus, at hic fugiat tempore laborum deleniti ratione? Fugit? Optio autem iure alias dicta earum? Consequatur accusantium earum aspernatur libero ducimus unde. Odio modi repellendus iure facilis. Dolorem provident libero autem minima vel, culpa error recusandae totam ratione accusantium.",
         "suspects": [
             {
                 "id": 4,
@@ -225,7 +226,7 @@
         ],
         "photos" : [],
         "urgency": 0,
-        "status": "PENDING",
+        "status": "RESOLVED",
         "rejection_feedback": null,
         "department_concern": "action taken",
         "reported_date": "2024-07-24",
